@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu primeiro programa</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../Aula04/style.css">
 </head>
 <body>
-    <img src="img/ola-mundo-logo.png" alt="Olá, Mundo!">
+    <img src="../Aula04/img/ola-mundo-logo.png" alt="Olá, Mundo!"><br><h1>
+            Olá, Nome! Seja Bem vindo!
+        </h1>
     <p>
         
         <span>Já me livrei da maldição, mas ca entre nós não ecredito nisso pois sou lavado e remido no sangue de Jesus Cristo.</span><span><b>23/10/2023</b></span>
         <br><br>
         <span>Já pensou em ter o seu próprio site? E se eu disser que você pode ter isso de graça? Parece até mentira, mas prode acreditar, estou disposto a trazer o seu projeto à realidae. Se tem interesse cadastre-se abaixo!</span><span><b>23/10/2023 - 23:15</b></span>
     </p>
+<!-- Parte em JavaScript -->
 <script>
     
-    // Mostra um popup com uma mensagem
-    window.alert('Seja bem vindo ao meu site, espero que desfrute bem dele!')
-    // Mostra um popup com confirmação
-    window.confirm('Está curtindo programar em JS')
+    
     // Mostra um popup com caixa de texto
-    window.prompt('Qual é o seu nome?')
+    var nome = window.prompt('Qual é o seu nome?')
+    window.alert('É um grande prazer te conhecer, '+nome+'!')
 
 </script>
 </body>
