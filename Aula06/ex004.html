@@ -12,13 +12,13 @@
     </Style>
 </head>
 <body>
-    <h1>Teste</h1>
+    <h1>Exercício de Aula 4</h1>
 
 
     <script>
         var nome = window.prompt('Qual o seu nome?')
-        var n1 = window.prompt("Quanto você deseja receber no seu próximo emprego?")
-        document.write(`Olá <strong>${nome}</strong>, seu próximo salário será de R$ ${n1.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})}`)
+        var n1 = Number(window.prompt("Quanto você deseja receber no seu próximo emprego?"))
+        document.write(`Olá <strong>${nome}</strong>, seu próximo salário será de  ${n1.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})}`)
     </script>
 </body>
 </html>
