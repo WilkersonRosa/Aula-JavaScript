@@ -12,13 +12,15 @@
     </Style>
 </head>
 <body>
-    <h1>Exercício de Aula 4</h1>
+    <h1>O aluno passou?</h1>
 
 
     <script>
-        var nome = window.prompt('Qual o seu nome?')
-        var n1 = Number(window.prompt("Quanto você deseja receber no seu próximo emprego?"))
-        document.write(`Olá <strong>${nome}</strong>, seu próximo salário será de  ${n1.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})}`)
+        var nome = window.prompt('Qual o nome do aluno?')
+        var n1 = Number(window.prompt("Qual foi a nota?"))
+        var res1 = "<strong>Aprovado</strong>"
+        var res2 = "<strong>Reprovado</strong>"
+        document.write(`<strong>${nome}</strong> tirou <strong>${n1}</strong>, portanto o aluno está  ${n1>=7.5?res1:res2}!`)
     </script>
 </body>
 </html>
