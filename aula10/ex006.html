@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Configuração do body */
+        body{
+            background: #00ffb3;
+            color: #ffffff;
+            font: normal 10pt Lucida Console;max-width: 400px;
+            
+            
+        }
+        
+        /* Estilo Cabeçalho */
+        #header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            line-height: 1px;
+        }
+        /* Estilo Conteúdo */
+        #page{
+            min-height: 500px;
+            background: #464646;
+            border-radius: 2vw;
+            position: absolute;
+            left: 20%;
+            right: 20%;
+            top: 2rem;
+            padding: 1rem;
+            border: 10px #ffffff77;
+            border-style:double;
+            box-shadow: 10px 10px 20px 1px #000000a6;
+        }
+
+        a{
+            text-decoration: none;
+            color: #00ffb3;
+        }
+
+        #buttom{
+            background-color: #00ffb3;
+            color: #464646;
+            width: 200px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            border-radius: 2px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+<!-- Conteúdo do Site -->
+    <div id="page">
+        <div id="header">
+            <h1 id="title">Hello, User!</h1>
+            <h3>Seja bem vindo!</h3>
+        </div>
+        <br><br>
+        <p><a href="">Recarregar</a> página.</p>
+        <div id="buttom">
+            Clique aqui!
+        </div>
+    </div>
+<!-- Seção JavaScript -->
+<script>
+    var a = document.getElementById('buttom')
+    var a1 = "Clicou!"
+    var a3 = 2
+    var a2 = `Clicou ${a3}x!`
+    a.addEventListener('click', clicar)
+    a.addEventListener('mouseenter', enter)
+    a.addEventListener('mouseout', over)
+    
+   function clicar() {
+
+    a.innerText = a1
+    a1 = a2
+    a3+=1
+    a2 = `Clicou `+a3+'x!'
+   }
+   function enter(){
+    a.style.backgroundColor = '#00b881'
+    a.style.width = "210px"
+    a.style.height = "27px"
+    a.style.lineHeight = "27px"
+   }
+   function over() {
+    a.style.backgroundColor = '#00ffb3'
+    a.style.width = "200px"
+    a.style.height = "25px"
+    a.style.lineHeight = "25px"
+   }
+</script>
+</body>
+</html>
