@@ -83,15 +83,14 @@
             var pais = window.document.getElementById("inputpais")
             var textloc = window.document.getElementById("paistxt")
 
-            textloc.innerHTML = `Seu país natal é ${pais}.`
-            if (pais == 'Brasil'){
-                textloc.innerHTML += "<p>Você é brasileiro.</p>"
+            textloc.innerHTML = `Seu país natal é ${pais.value}.`
+            if (pais.value == 'Brasil'){
+                textloc.innerHTML += "<p>Portanto, você é brasileiro.</p>"
             }
             else{
-                textloc.innerHTML += "<p>Você é estrangeiro.</p>"
+                textloc.innerHTML += "<p>Portanto, você é estrangeiro.</p>"
             } 
         }
-
     </script>
 </body>
 </html>
