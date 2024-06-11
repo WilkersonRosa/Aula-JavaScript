@@ -55,4 +55,3 @@ else{
 var diames = agora.getDate()
 
 console.log(`Hoje é dia ${diames}, ${diasem}, e agora são ${hora}:${min} da ${periododia}. Obrigado!`)
-.
