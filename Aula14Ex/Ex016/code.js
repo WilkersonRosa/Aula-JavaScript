@@ -2,39 +2,36 @@
 
 function gerar(){
     
-    let inic = window.document.getElementById("n1")
-    let fim = window.document.getElementById("n2")
-    let pass = window.document.getElementById("n3")
+    let inf = [window.document.getElementById("n1"), window.document.getElementById("n2"), window.document.getElementById("n3"), window.document.querySelector("div#res")]
+    
+    
+    
+    inf[3].innerHTML = ("")//inf[3] representa a div
 
-    
-    
-    let result = window.document.querySelector("div#res")
-    result.innerHTML = ("")
-    if (inic.value.length == 0 || fim.value.length == 0 || pass.value.length == 0){
+    if (inf[0].value.length == 0 || inf[1].value.length == 0 || inf[2].value.length == 0){
         //window.alert('[Erro!] Faltam Dados!')
-        result.innerHTML = 'Impossível contar!'
+        inf[3].innerHTML = 'Impossível contar!'
     }else{
-        var n1 = Number(inic.value)
-        var n2 = Number(fim.value)
-        var n3 = Number(pass.value)
-        if (n3 <= 0){
+        var num = [Number(inf[0].value),Number(inf[1].value),Number(inf[2].value)]
+
+        if (num[2] <= 0){
             window.alert('Passo inválido! Considerando PASSO 1')
-            n3 = 1
+            num[2] = 1
         }
 
-        result.innerHTML = "Contando: "
-        if (n1 < n2){
+        inf[3].innerHTML = "Contando: "
+        if (num[0] < num[1]){
             //Contagem crescente
-            for (let c = n1; c <= n2; c += n3){
-                result.innerHTML += `${c} \u{1F449}`
+            for (let c = num[0]; c <= num[1]; c += num[2]){
+                inf[3].innerHTML += `${c} \u{1F449}`
             }
         }else {
             //Contagem Regressiva
-            for (let c = n1; c >= n2; c -= n3){
-                result.innerHTML += `${c} \u{1f449}`
+            for (let c = num[0]; c >= num[1]; c -= num[2]){
+                inf[3].innerHTML += `${c} \u{1f449}`
             }
         }
-        result.innerHTML += `\u{1F3C1}`
+        inf[3].innerHTML += `\u{1F3C1}`
         
     }
 
